@@ -1,22 +1,122 @@
-.App {
-  text-align: center;
+body {
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, #000, #8888);
 }
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-container{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  width: 100%;
+}
+.image-results{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: space-around;
+  margin: auto;
+}
+.image-results a{
+  text-decoration: none;
   color: white;
 }
-
-.App-link {
-  color: #09d3ac;
+.image-results a:hover{
+  text-decoration: none;
+  color: white;
 }
+.search-container{
+  display: flex;
+  width: 100%;
+  margin: 20px auto;
+  justify-content: center;
+}
+.middle{
+  transition: .5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 30px;
+  transform: translateY(-150px); 
+  text-align: center;
+  background-color: rgba(255,255,255,.15);
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.img-list:hover {
+  opacity: 0.5;
+} 
+.image-results:hover .middle{
+  opacity: 1;
+}
+input[type=text] {
+  width: 300px;
+  height: 50px;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  transition: width 0.4s ease-in-out;
+  background-color: rgba(255,255,255,.15);
+  border: 2px solid rgba(255,255,255,.15) ;
+  border-radius: 25px;
+}
+input[type=text]:focus {
+  width: 600px;
+  outline: none;
+}
+::placeholder {
+  color: white;
+  font-weight: lighter;
+}
+.btn-warning{
+  color: #fff;
+  font-size: 1.8rem;
+  background-color: rgba(255,255,255,.15);
+  border: 2px solid rgba(255,255,255,.15) ;
+  border-radius: 50%;
+  outline: none;
+  transition: all 0.3s
+} 
+.btn-warning:focus{
+  outline: none;
+}
+.btn-warning:active{
+  background-color: rgb(28, 141, 107);
+  opacity: 0;
+  transition: all 0.2s;
+  outline: none;
+}
+@media only screen and (max-width : 375px) {
+  input[type=text] {
+    width: 200px;
+    height: 50px;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    background-color: rgba(255,255,255,.15);
+    border: 2px solid rgba(255,255,255,.15) ;
+    border-radius: 25px;
+  } 
+  .image-results{
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    margin-left: 45px;
+  }
+  ::placeholder {
+    color: white;
+    font-weight: lighter;
+    font-size: 25px;
+  }
+  .btn-warning{
+    font-size: 2.4rem;
+    background-color: rgba(255,255,255,.15);
+    border-radius: 50%; 
+    outline: none;
+  } 
+  input[type=text]:focus {
+    width: 300px;
+    outline: none;
+  }
+
+}
+
